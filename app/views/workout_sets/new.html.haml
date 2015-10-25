@@ -1,0 +1,11 @@
+= form_for @set do |f|
+  .weight
+    = f.label :weight
+    = f.number_field :weight, value: @set.previous_set.try!(:weight)
+  .rep_count
+    = f.label :rep_count
+    = f.number_field :rep_count, value: @set.previous_set.try!(:rep_count)
+  = f.hidden_field :exercise_id
+  = f.hidden_field :workout_id
+
+  = f.submit

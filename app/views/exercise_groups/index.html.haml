@@ -1,0 +1,7 @@
+.exercise_groups
+  - @exercise_groups.each do |exercise_group|
+    .exercise_group.container
+      = link_to 'start workout', workouts_path(exercise_group_id: exercise_group.id), method: :post
+      %ul
+        - exercise_group.exercises.each do |exercise|
+          %li= exercise.name

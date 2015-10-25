@@ -1,0 +1,6 @@
+%h1 Current Workout
+
+.workout
+  - @workout.exercises.each do |exercise|
+    .exercise.container
+      = link_to exercise.name, new_workout_set_path({ workout_set: { exercise_id: exercise.id, workout_id: @workout.id } })
