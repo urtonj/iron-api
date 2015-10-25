@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 20151024233900) do
   enable_extension "plpgsql"
 
   create_table "exercise_group_exercises", force: :cascade do |t|
-    t.integer "exercise_id"
-    t.integer "exercise_group_id"
+    t.integer "exercise_id",       null: false
+    t.integer "exercise_group_id", null: false
   end
 
   create_table "exercise_groups", force: :cascade do |t|
@@ -40,17 +40,17 @@ ActiveRecord::Schema.define(version: 20151024233900) do
   end
 
   create_table "workout_sets", force: :cascade do |t|
-    t.integer  "exercise_id"
-    t.integer  "rep_count"
-    t.integer  "weight"
-    t.integer  "workout_id"
+    t.integer  "exercise_id", null: false
+    t.integer  "rep_count",   null: false
+    t.integer  "weight",      null: false
+    t.integer  "workout_id",  null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "workouts", force: :cascade do |t|
-    t.integer  "exercise_group_id"
-    t.integer  "user_id"
+    t.integer  "exercise_group_id", null: false
+    t.integer  "user_id",           null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
