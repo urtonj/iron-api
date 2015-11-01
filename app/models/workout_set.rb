@@ -1,5 +1,6 @@
 class WorkoutSet < ActiveRecord::Base
   belongs_to :exercise
+  # dependent destroy
   belongs_to :workout
 
   validates_numericality_of :rep_count, greater_than: 0
