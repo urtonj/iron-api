@@ -1,8 +1,13 @@
 class WorkoutSet < ActiveRecord::Base
+  # Associations
   belongs_to :exercise
-  # dependent destroy
   belongs_to :workout
 
+  # Validations
+  validates_presence_of :exercise
+  validates_presence_of :rep_count
+  validates_presence_of :weight
+  validates_presence_of :workout
   validates_numericality_of :rep_count, greater_than: 0
   validates_numericality_of :weight, greater_than: 0
 
