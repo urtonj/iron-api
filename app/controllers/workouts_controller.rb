@@ -12,6 +12,6 @@ class WorkoutsController < ApplicationController
   private
 
   def workout_params
-    params.permit(:exercise_group_id)
+    params.permit :exercise_group_id
   end
 end
