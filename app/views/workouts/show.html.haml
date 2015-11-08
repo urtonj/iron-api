@@ -8,4 +8,5 @@
         %ul
           - @workout.sets.where(exercise: exercise).each do |set|
             %li= "#{set.weight} x #{set.rep_count}"
+            = link_to 'edit', edit_workout_set_path(set)
         %a.button{ href: new_workout_set_path({ workout_set: { exercise_id: exercise.id, workout_id: @workout.id } }) } add set
