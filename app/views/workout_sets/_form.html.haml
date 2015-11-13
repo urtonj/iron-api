@@ -2,10 +2,10 @@
   .container
     .weight
       = f.label :weight
-      = f.number_field :weight, step: 5, value: @set_for_autofill.weight
+      = f.number_field :weight, step: 5, value: @set_for_autofill.try!(:weight)
     .rep_count
       = f.label :rep_count
-      = f.number_field :rep_count, value: @set_for_autofill.rep_count
+      = f.number_field :rep_count, value: @set_for_autofill.try!(:rep_count)
     = f.hidden_field :exercise_id
     = f.hidden_field :workout_id
 
