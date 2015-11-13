@@ -2,14 +2,8 @@
 
 To do:
 
-* Add request specs
-
-* Add feature specs
-
 * Extract front-end component into separate app (iron-ui)
 
 * Update README with description
-
-* Enable WorkoutSet updates from mobile
 
 * Avoid accidental creation of new workouts (save Workout on save of associated WorkoutSet)
