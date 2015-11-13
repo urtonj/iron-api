@@ -15,6 +15,13 @@ class WorkoutSetsController < ApplicationController
     @set_for_autofill = @set.previous_set
   end
 
+  def update
+    set = WorkoutSet.find(params[:id])
+    set.update workout_set_params
+
+    redirect_to workout_path set.workout_id
+  end
+
   private
 
   def workout_set_params
