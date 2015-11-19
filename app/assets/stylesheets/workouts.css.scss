@@ -8,6 +8,17 @@
       h3 {
         margin: 0px;
       }
+
+      li {
+        display: inline;
+      }
+
+      .previous {
+        color: gray;
+        font-size: 32px;
+        font-style: italic;
+        margin-top: 20px;
+      }
     }
   }
 }

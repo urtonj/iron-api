@@ -7,6 +7,8 @@ class WorkoutsController < ApplicationController
 
   def show
     @workout = Workout.find(params[:id])
+    @last_workout = Workout.where(exercise_group_id: @workout.exercise_group).where.
+      not(id: @workout.id).order(:created_at).last
   end
 
   private
