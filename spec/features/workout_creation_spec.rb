@@ -16,7 +16,7 @@ feature 'Workout creation' do
 
     click_button 'start workout'
     click_link 'add set'
-    expect(page).to have_field(:workout_set_weight, with: 100)
+    expect(page).to have_field(:workout_set_weight, with: 100.0)
     expect(page).to have_field(:workout_set_rep_count, with: 4)
 
     fill_in :workout_set_weight, with: 225
